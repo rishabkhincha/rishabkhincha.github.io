@@ -128,8 +128,10 @@
 
                 <!-- <br> -->
                 <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#content-news" id="news"><heading>News</heading></button>
+                <!-- <div class="container"> -->
                 <div id="content-news" class="collapse in">
-
+                <!-- <div class="scroll">  -->
+                
                 <table border=0 class="bg_colour" style="padding:10px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                     
                     <tr>
@@ -240,6 +242,8 @@
                         </td>
                     </tr>
                 </tbody></table>
+                <!-- </div> -->
+                <!-- </div> -->
                 </div>
                 <hr class="soft">
                 
@@ -344,11 +348,8 @@
                 <table border=0 class="bg_colour" style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
                     <tr>
-                        <td class="tdNews">
-                            <p style="color:blue; display:inline">June '20</p>
-                        </td>
                         <td>
-                            Add.
+                            Under construction. Please check Projects section!
                         </td>
                     </tr>
 
@@ -366,6 +367,48 @@
                 <div id="content-projects" class="collapse in">
 
                 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+                    <tr>
+                        <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one">
+                                <img src='images/dem_unc_boost.png' width="120">
+                            </div>
+                        </td>
+                        <td style="padding:20px;width:75%;vertical-align:top">
+                            <papertitle><big>Uncertainty-Aware Ensembling for Severity Prediction of Alzheimer’s Dementia</papertitle></big>
+                            <br>
+                            <p><em>Under review </em><a href="https://github.com/wazeerzulfikar/alzheimers-dementia" target="_blank"> [code] </a></p>
+                            <p>In this work, we propose an uncertainty-aware boosting technique for multi-modal ensembling to predict Alzheimer’s Dementia Severity. The propagation of uncertainty across acoustic, cognitive, and linguistic features produces an ensemble system robust  to heteroscedasticity in the data. Weighing the different modalities based on the uncertainty estimates, we experiment on the  benchmark ADReSS dataset to show that our method outperforms the state-of-the-art methods while also reducing the overall entropy of the system.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one">
+                                <img src='images/dse_unc.png' width="120">
+                            </div>
+                        </td>
+                        <td style="padding:20px;width:75%;vertical-align:top">
+                            <papertitle><big>Disentangling Predictive Uncertainties using Deep Split Ensembles</papertitle></big>
+                            <br>
+                            <p><em>Under review </em><a href="https://arxiv.org/pdf/2009.12406.pdf" target="_blank">[preprint]</a> <a href="https://github.com/rishabkhincha/deep-split-ensembles" target="_blank">[code]</a> </p>
+                            <p>We propose a conceptually simple non-Bayesian approach, deep split ensemble, to disentangle the predictive uncertainties using a multivariate Gaussian mixture model. The NNs are trained with clusters of input features, for uncertainty estimates per cluster. Extensive analyses using dataset shits and empirical rule highlight our inherently well-calibrated models. Our work further demonstrates its applicability in a multi-modal setting using a benchmark Alzheimer’s dataset and also shows how deep split ensembles can highlight hidden modality-specific biases</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one">
+                                <img src='images/missing_dendogram.png' width="120">
+                            </div>
+                        </td>
+                        <td style="padding:20px;width:75%;vertical-align:top">
+                            <papertitle><big>Robustness to Missing Features using Hierarchical Clustering with Split Neural Networks</papertitle></big>
+                            <br>
+                            <p><em>Under review </em><a href="https://github.com/rishabkhincha/Robustness-to-Missing-Features" target="_blank"> [code]</a></p>
+                            <p>Built a pipeline comprising of models for lung isolation, followed by classification into different disease classes. We further augment our network with symptom embeddings produced by the CheXpert network and achieve excellent results. Our visualisation maps provide trustworthy and interpretable decisions to radiologists for clinical deployment.</p>
+                        </td>
+                    </tr>
 
                     <tr onmouseout="covid_stop()" onmouseover="covid_start()" >
                         <td style="padding:20px;width:25%;vertical-align:middle">
@@ -394,24 +437,11 @@
                         </td>
                     </tr>
 
-                    <tr onmouseout="tl_stop()" onmouseover="tl_start()" >
+                    <tr>
                         <td style="padding:20px;width:25%;vertical-align:middle">
                             <div class="one">
-                                <div class="two" id='lesion_tl'>
-                                    <img src='images/lesion.jpg' width="120">
-                                </div>
                                 <img src='images/lesion.jpg' width="120">
                             </div>
-                            <script type="text/javascript">
-                                function tl_start() {
-                                    document.getElementById('lesion_tl').style.opacity = "1";
-                                }
-
-                                function tl_stop() {
-                                    document.getElementById('lesion_tl').style.opacity = "0";
-                                }
-                                tl_stop()
-                            </script>
                         </td>
                         <td style="padding:20px;width:75%;vertical-align:top">
                             <papertitle><big>Knowledge Transfer in Lesions</big></papertitle>
@@ -421,83 +451,44 @@
                         </td>
                     </tr> 
 
-                    <tr onmouseout="ic_stop()" onmouseover="ic_start()" >
+                    <tr>
                         <td style="padding:20px;width:25%;vertical-align:middle">
                             <div class="one">
-                                <div class="two" id='imagecube'>
-                                    <img src='images/imagecube_post.png' width="120">
-                                </div>
                                 <img src='images/imagecube_pre.png' width="120">
                             </div>
-                            <script type="text/javascript">
-                                function ic_start() {
-                                    document.getElementById('imagecube').style.opacity = "1";
-                                }
-
-                                function ic_stop() {
-                                    document.getElementById('imagecube').style.opacity = "0";
-                                }
-                                ic_stop()
-                            </script>
                         </td>
                         <td style="padding:20px;width:75%;vertical-align:top">
                             <papertitle><big>ImageCube</big></papertitle>
                             <br>
-                            <p><em><a href="data/PyAstro_invite.pdf" target="_blank">Invited</a> for an hour long talk at <a href="http://openastronomy.org/pyastro/2020/" target="_blank">PyAstro 2020</a>, Trinity College Dublin.</em></p>
+                            <p><em><a href="data/PyAstro_invite.pdf" target="_blank">Invited</a> for an hour long talk at <a href="http://openastronomy.org/pyastro/2020/" target="_blank">PyAstro 2020</a>, Trinity College Dublin. </em><a href="https://github.com/rishabkhincha/ImageCube-1" target="_blank">[code]</a></p>
                             <p>Built an open source image processing tool in Python to process multi-wavelength astronomy images. On registereing the images from different telescope to a common world coordinate system, they are convolved and re-sampled to a common pixel scale. These images are now put together to form an image cube, to help for easy analysis.</p>
                         </td>
                     </tr> 
 
-                    <tr onmouseout="apnea_stop()" onmouseover="apnea_start()" >
+                    <tr>
                         <td style="padding:20px;width:25%;vertical-align:middle">
                             <div class="one">
-                                <div class="two" id='ecg_apnea'>
-                                    <img src='images/apnea_post.png' width="120">
-                                </div>
-                                <img src='images/apnea_pre.png' width="120">
+                                <img src='images/apnea_post.png' width="120">
                             </div>
-                            <script type="text/javascript">
-                                function apnea_start() {
-                                    document.getElementById('ecg_apnea').style.opacity = "1";
-                                }
-
-                                function apnea_stop() {
-                                    document.getElementById('ecg_apnea').style.opacity = "0";
-                                }
-                                apnea_stop()
-                            </script>
                         </td>
                         <td style="padding:20px;width:75%;vertical-align:top">
                             <papertitle><big>Sleep Apnea Detection on an Embedded Device</big></papertitle>
                             <br>
-                            <p><em>Accepted as a <a href="https://link.springer.com/chapter/10.1007/978-3-030-51935-3_40" target="_blank">full paper</a> at <a href="http://icisp-conf.org/" target="_blank">ICISP 2020</a>.</em></p>
+                            <p><em>Accepted as a <a href="https://link.springer.com/chapter/10.1007/978-3-030-51935-3_40" target="_blank">full paper</a> at <a href="http://icisp-conf.org/" target="_blank">ICISP 2020</a>.</em> <a href="https://github.com/rishabkhincha/SleepApneaDetector" target="_blank">[code]</a></p>
                             <p>We developed a data analysis pipeline combining dataset extraction, segmentation, signal cleaning and filtration to detect the presence of sleep apnea using SVMs. On testing our approach on the MIT-Physionet dataset, we find that the low computational complexity makes it well suited for deployment on embedded devices such as the Raspberry Pi.</p>
                         </td>
                     </tr> 
 
-                    <tr onmouseout="sna_stop()" onmouseover="sna_start()" >
+                    <tr>
                         <td style="padding:20px;width:25%;vertical-align:middle">
                             <div class="one">
-                                <div class="two" id='sna'>
-                                    <img src='images/socialnetwork_post.png' width="120">
-                                </div>
-                                <img src='images/socialnetwork_pre.png' width="120">
+                                <img src='images/socialnetwork_post.png' width="120">
                             </div>
-                            <script type="text/javascript">
-                                function sna_start() {
-                                    document.getElementById('sna').style.opacity = "1";
-                                }
-
-                                function sna_stop() {
-                                    document.getElementById('sna').style.opacity = "0";
-                                }
-                                sna_stop()
-                            </script>
                         </td>
                         <td style="padding:20px;width:75%;vertical-align:top">
                             <papertitle><big>Online Learning Assistant with Network Community Analysis</big></papertitle>
                             <br>
-                            <p><em>Under review at XX '20.</em></p>
+                            <p><em>Under review</em></p>
                             <p>Built a simple and scalable platform agnostic tool to aid online discussion forums using Social Network Analysis. We extract keywords from a chat, and list out the top users for this keyword and their activity histograms using a sliding window exponential ranking system. We have tested our methodology onUbuntu IRC Logs and on our university chat for courses.</p>
                         </td>
                     </tr> 
